@@ -1,0 +1,15 @@
+meta {
+  name: Local Ollama Tags
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://127.0.0.1:11434/api/tags
+  body: none
+  auth: none
+}
+
+assert {
+  res.status: eq 200
+}
